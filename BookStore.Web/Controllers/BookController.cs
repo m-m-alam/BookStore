@@ -5,12 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BookStore.Web.Models;
 using BookStore.Web.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BookStore.Web.Controllers
 {
+    [Authorize]
     public class BookController : Controller
     {
         private readonly IBookRepository _bookRepository;
