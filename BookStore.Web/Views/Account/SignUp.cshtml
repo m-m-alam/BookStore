@@ -1,0 +1,52 @@
+﻿@model SignUpModel
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Create a new account</h1>
+            <form asp-action="SignUp" asp-controller="Account" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label"></label>
+                    <input class="form-control" asp-for="FirstName" placeholder="book title">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label"></label>
+                    <input class="form-control" asp-for="LastName" placeholder="book title">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DOB" class="form-label"></label>
+                    <input class="form-control" asp-for="DOB" placeholder="book title">
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input class="form-control" asp-for="Email" placeholder="book title">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input class="form-control" asp-for="Password" placeholder="book title">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <input  class="form-control" asp-for="ConfirmPassword" placeholder="book title">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+}
